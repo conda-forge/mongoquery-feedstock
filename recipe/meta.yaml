@@ -23,10 +23,6 @@ requirements:
 test:
     imports:
         - mongoquery
-    requires:
-        - pytest
-    commands:
-        - py.test {{ environ.SRC_DIR }}/tests -vrsx
 
 about:
     home: https://github.com/kapouille/mongoquery
