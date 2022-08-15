@@ -1,44 +1,40 @@
-{% set version = "1.3.5" %}
+{% set version = "1.4.2" %}
 
 package:
-    name: mongoquery
-    version: {{ version }}
+  name: mongoquery
+  version: {{ version }}
 
 source:
-    url: https://github.com/kapouille/mongoquery/archive/{{ version }}.tar.gz
-    fn: mongoquery-{{ version }}.tar.gz
-    sha256: a8b7efe7939109fc0fcb780b7e8ceecf6a5218b4543f338e6067363f0aba4620
+  url: https://github.com/kapouille/mongoquery/archive/{{ version }}.tar.gz
+  fn: mongoquery-{{ version }}.tar.gz
+  sha256: 5503c551c256547b92a24c3425b3ecf2b11df08aa4a57b82f47f528ab48585f3
 
 build:
-    noarch: python
-    number: 0
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-    build:
-        - pip
-        - python
-    run:
-        - python
-        - six
+  host:
+    - pip
+    - python >=3.7
+  run:
+    - python >=3.7
+    - six
 
 test:
-    imports:
-        - mongoquery
+  imports:
+    - mongoquery
 
 about:
-    home: https://github.com/kapouille/mongoquery
-    license: Public Domain
-    summary: >
-        A utility library that provides a MongoDB-like query
-        language for querying python collections. It's mainly
-        intended to parse objects structured as fundamental types in
-        a similar fashion to what is produced by JSON or YAML
-        parsers.
+  home: https://github.com/kapouille/mongoquery
+  license: Unlicense
+  summary: >
+    A utility library that provides a MongoDB-like query language for querying python collections. It's mainly intended to parse objects structured as fundamental types in a similar fashion to what is produced by JSON or YAML parsers.
 
 extra:
-    recipe-maintainers:
-        - kapouille
-        - licode
-        - tacaswell
-        - CJ-Wright
+  recipe-maintainers:
+    - kapouille
+    - licode
+    - tacaswell
+    - CJ-Wright
