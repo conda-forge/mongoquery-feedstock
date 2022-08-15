@@ -3,7 +3,7 @@ About mongoquery
 
 Home: https://github.com/kapouille/mongoquery
 
-Package license: Public Domain
+Package license: Unlicense
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mongoquery-feedstock/blob/main/LICENSE.txt)
 
@@ -148,4 +148,3 @@ Feedstock Maintainers
 * [@kapouille](https://github.com/kapouille/)
 * [@licode](https://github.com/licode/)
 * [@tacaswell](https://github.com/tacaswell/)
-
