@@ -1,4 +1,4 @@
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 package:
   name: mongoquery
@@ -7,11 +7,11 @@ package:
 source:
   url: https://github.com/kapouille/mongoquery/archive/{{ version }}.tar.gz
   fn: mongoquery-{{ version }}.tar.gz
-  sha256: 5503c551c256547b92a24c3425b3ecf2b11df08aa4a57b82f47f528ab48585f3
+  sha256: e3fb7b0c5235514adadee72c34200e3968d68b822e85e16cd64bdb7fa4541df9
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
